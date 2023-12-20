@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bakery Management System</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Bakery Management System</h1>
+        
+        <!-- Inventory Section -->
+        <div id="inventory">
+            <h2>Inventory</h2>
+            <ul id="inventoryList"></ul>
+        </div>
+
+        <!-- Add Products Section -->
+        <div id="addProducts">
+            <h2>Add Products</h2>
+            <form id="addProductForm">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" required>
+                <label for="productPrice">Product Price:</label>
+                <input type="number" id="productPrice" step="0.01" required>
+                <label for="productQuantity">Initial Quantity:</label>
+                <input type="number" id="productQuantity" required>
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
+
+        <!-- Order Section -->
+        <div id="order">
+            <h2>Place an Order</h2>
+            <select id="productSelect"></select>
+            <input type="number" id="quantity" placeholder="Quantity" min="1">
+            <button id="addToCartBtn">Add to Cart</button>
+        </div>
+
+        <!-- Cart Section -->
+        <div id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cartList"></ul>
+            <button id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
